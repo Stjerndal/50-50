@@ -3,7 +3,11 @@ package com.paradox.fiftyfifty;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-
+/**
+ * This is the main activity class
+ * @author Måns
+ *
+ */
 public class MainActivity extends Activity {
 
     @Override
