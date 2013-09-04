@@ -37,6 +37,9 @@ public class User {
 		this.emailAddress = "";
 		this.numberOfQuestionsAnswered = 0;
 		this.pointsTotal = 0;
+		this.points1v1 = 0;
+		this.pointsGuessPopular = 0;
+		this.pointsSubmittedQuestions = 0;
 	}
 
 	/**
@@ -56,6 +59,9 @@ public class User {
 		this.emailAddress = emailAddress;
 		this.numberOfQuestionsAnswered = 0;
 		this.pointsTotal = 0;
+		this.points1v1 = 0;
+		this.pointsGuessPopular = 0;
+		this.pointsSubmittedQuestions = 0;
 	}
 
 	/**
@@ -77,6 +83,9 @@ public class User {
 		this.emailAddress = emailAddress;
 		this.numberOfQuestionsAnswered = 0;
 		this.pointsTotal = 0;
+		this.points1v1 = 0;
+		this.pointsGuessPopular = 0;
+		this.pointsSubmittedQuestions = 0;
 	}
 
 	/**
