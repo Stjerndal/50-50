@@ -8,12 +8,19 @@ package com.paradox.fiftyfifty;
  * 
  */
 public class HonestQuestion {
-
+	private User user;
+	
+	
 	/**
-	 * constructor
+	 * constructor, takes the active player's user object
+	 *
 	 */
-	public HonestQuestion() {
-		// TODO
+	public HonestQuestion(User user) {
+		this.user = user;
+	}
+	
+	public User getUser(){
+		return this.user;
 	}
 
 	/**
