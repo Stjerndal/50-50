@@ -29,7 +29,7 @@ public class HonestQuestion {
 	 * @param question
 	 * @param answer
 	 */
-	public answerQuestion(Question question, String answer){
+	public void answerQuestion(Question question, String answer){
 		if(answer.equals(question.answer1)){
 			question.setChosenAnswer(1);
 			DBHandler.updateQuestion(question);
