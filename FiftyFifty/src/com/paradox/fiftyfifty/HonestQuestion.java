@@ -50,8 +50,7 @@ public class HonestQuestion {
 		} else {
 			System.err.println("No answer, -> HonestQuestion/answerQuestion");
 		}
-		user.updateRemainingQuestionSendIns(-1);
-		user.updateAmountOfQuestionsAnswered(1);
+		user.updateNumberOfQuestionsAnswered(1);
 	}
 
 }
