@@ -20,7 +20,7 @@ public class DBHandler {
 	 * @param userID
 	 * @return User
 	 */
-	public User getUser(String userID){
+	public static User getUser(String userID){
 		//TODO	
 		return null;
 	}
@@ -29,7 +29,7 @@ public class DBHandler {
 	 * Gets a random question form the database and puts it into a Question object
 	 * @return Question
 	 */
-	public Question getRandomQuestion(){
+	public static Question getRandomQuestion(){
 		//TODO
 		return null;
 	}
@@ -38,7 +38,7 @@ public class DBHandler {
 	 * Takes an User object and stores it in the database
 	 * @param user
 	 */
-	public void newUser(User user){
+	public static void newUser(User user){
 		//TODO
 	}
 	
@@ -46,7 +46,7 @@ public class DBHandler {
 	 * Takes an User object and updates an existing user in the database with the given data 
 	 * @param user
 	 */
-	public void modifyUser(User user){
+	public static void modifyUser(User user){
 		//TODO
 	}
 	
@@ -54,7 +54,7 @@ public class DBHandler {
 	 * Takes a Question object and stores it in the database 
 	 * @param question
 	 */
-	public void submitQuestion(Question question){
+	public static void submitQuestion(Question question){
 		//TODO
 	}
 	
@@ -62,7 +62,7 @@ public class DBHandler {
 	 * Takes a Question object and updates the corresponding question in the database with it's information
 	 * @param question
 	 */
-	public void updateQuestion(Question question){
+	public static void updateQuestion(Question question){
 		//TODO
 	}
 	
@@ -72,7 +72,7 @@ public class DBHandler {
 	 * @param user
 	 * @return User
 	 */
-	public User login(User user){
+	public static User login(User user){
 		//TODO
 		return null;
 	}
