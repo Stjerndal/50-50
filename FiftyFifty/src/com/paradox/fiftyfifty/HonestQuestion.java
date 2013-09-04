@@ -47,7 +47,11 @@ public class HonestQuestion {
 		} else if (answer.equals(question.answer2)) {
 			question.setChosenAnswer(2);
 			DBHandler.updateQuestion(question);
+		} else {
+			System.err.println("No answer, -> HonestQuestion/answerQuestion");
 		}
+		user.updateRemainingQuestionSendIns(-1);
+		user.updateAmountOfQuestionsAnswered(1);
 	}
 
 }
