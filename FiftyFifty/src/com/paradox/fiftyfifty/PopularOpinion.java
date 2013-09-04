@@ -12,7 +12,7 @@ public class PopularOpinion {
 	}
 	
 	/**
-	 * contacts a DBHandler to get a random question from the database
+	 * contacts a DBHandler to get a random question from the database.
 	 * 
 	 * @return question
 	 */
