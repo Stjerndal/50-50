@@ -1,6 +1,6 @@
 package com.paradox.fiftyfifty;
 /**
- * STUPID ANDREAS
+ * STUPID ANDREASs
  * @author Måns
  *asdsad
  */
