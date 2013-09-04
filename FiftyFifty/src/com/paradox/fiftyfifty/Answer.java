@@ -2,12 +2,22 @@ package com.paradox.fiftyfifty;
 
 public class Answer {
 
+	String answerText;
+	
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public Answer(){
+		answerText = "";
 	}
+
+	public String getAnswerText() {
+		return answerText;
+	}
+
+	public void setAnswerText(String answerText) {
+		this.answerText = answerText;
+	}
+
 
 }
