@@ -15,7 +15,11 @@ public class User {
 	String emailAddress;
 
 	int numberOfQuestionsAnswered;
+
 	int pointsTotal;
+	int pointsGuessPopular;
+	int pointsSubmittedQuestions;
+	int points1v1;
 
 	ArrayList<String> questionIDs;
 
@@ -114,6 +118,14 @@ public class User {
 				% AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT;
 	}
 
+	/**
+	 * Method to be invoked when a user guessed the right popular opinion
+	 */
+	public void guessedCorrect() {
+		this.pointsGuessPopular++;
+
+	}
+
 	public String getUserID() {
 		return userID;
 	}
@@ -172,6 +184,30 @@ public class User {
 
 	public static int getAmountOfQuestionsRequiredToSubmit() {
 		return AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT;
+	}
+
+	public int getPointsGuessPopular() {
+		return pointsGuessPopular;
+	}
+
+	public void setPointsGuessPopular(int pointsGuessPopular) {
+		this.pointsGuessPopular = pointsGuessPopular;
+	}
+
+	public int getPointsSubmittedQuestions() {
+		return pointsSubmittedQuestions;
+	}
+
+	public void setPointsSubmittedQuestions(int pointsSubmittedQuestions) {
+		this.pointsSubmittedQuestions = pointsSubmittedQuestions;
+	}
+
+	public int getPoints1v1() {
+		return points1v1;
+	}
+
+	public void setPoints1v1(int points1v1) {
+		this.points1v1 = points1v1;
 	}
 
 }
