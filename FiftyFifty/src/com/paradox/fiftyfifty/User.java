@@ -3,27 +3,7 @@ package com.paradox.fiftyfifty;
 import java.util.ArrayList;
 
 /**
- * @author Anden
- * 
- */
-/**
- * @author Anden
- *
- */
-/**
- * @author Anden
- *
- */
-/**
- * @author Anden
- *
- */
-/**
- * @author Anden
- *
- */
-/**
- * @author Anden
+ * @author Andreas Stjerndal, Kalle Sederblad, Måns Odstam
  * 
  */
 public class User {
@@ -121,6 +101,17 @@ public class User {
 	 */
 	public void updateNumberOfQuestionsAnswered(int modifier) {
 		this.numberOfQuestionsAnswered += modifier;
+	}
+
+	/**
+	 * Calculate the amount of questions remaining to be answered before the
+	 * user can sumit a new question
+	 * 
+	 * @return the amount of questions remaining
+	 */
+	public int remainingQuestionsRequiredToSubmit() {
+		return numberOfQuestionsAnswered
+				% AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT;
 	}
 
 	public String getUserID() {
