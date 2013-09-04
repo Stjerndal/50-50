@@ -40,8 +40,8 @@ public class HonestQuestion {
 	 * @param question
 	 * @param answer
 	 */
-	public void answerQuestion(Question question, String answer){
-		if(answer.equals(question.answer1)){
+	public void answerQuestion(Question question, String answer) {
+		if (answer.equals(question.answer1)) {
 			question.setChosenAnswer(1);
 			DBHandler.updateQuestion(question);
 		} else if (answer.equals(question.answer2)) {
