@@ -28,7 +28,7 @@ public class PopularOpinion {
 	 */
 	public boolean wasRight(String guess, String correct){
 		if(guess.equals(correct)){//right
-			user.addPointGuessing(1);
+			user.guessedCorrect();
 			return true;
 		}
 		else{//wrong
