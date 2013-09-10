@@ -25,6 +25,7 @@
         android:id="@+id/submit_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="submit"
         android:text="@string/submit_question" />
 
     <Button
