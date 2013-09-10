@@ -17,13 +17,15 @@
     <string name="leaderboards">Leaderboards</string>
     <string name="my_profile">My profile</string>
     <string name="one_vs_one">1 vs 1</string>
+    <string name="username">Username</string>
+    <string name="emailAddress">Email Address</string>
     <string name="title_activity_submit_question">SubmitQuestionActivity</string>
     <string name="activity_submit_question_explanation">Submit your question by writing it in the question-field and then provid two answer alternatives below. Then click "Submit Question".</string>
-	<string name="activity_submit_question_hint_submit">Write your question here!</string>
-	<string name="activity_submit_question_hint_alternative_1">Alternative 1 here!</string>
-	<string name="activity_submit_question_hint_alternative_2">Alternative 2 here!</string>
-	<string name="activity_suvmit_question_button_submit">Submit Question</string>
-	<string name="activity_suvmit_question_button_cancel">Cancel</string>
-	
-	
+    <string name="activity_submit_question_hint_submit">Write your question here!</string>
+    <string name="activity_submit_question_hint_alternative_1">Alternative 1 here!</string>
+    <string name="activity_submit_question_hint_alternative_2">Alternative 2 here!</string>
+    <string name="activity_suvmit_question_button_submit">Submit Question</string>
+    <string name="activity_suvmit_question_button_cancel">Cancel</string>
+    <string name="title_activity_email_create_account">EmailCreateAccountActivity</string>
+
 </resources>
