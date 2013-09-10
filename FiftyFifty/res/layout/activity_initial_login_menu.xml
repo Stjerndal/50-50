@@ -2,13 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".InitialLoginMenuActivity" 
-    android:gravity="center">
+    tools:context=".InitialLoginMenuActivity" >
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,6 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/tv_facebook_login_details"
         android:textStyle="italic" />
 
@@ -27,9 +28,10 @@
         android:id="@+id/facebook_login_button"
         android:layout_width="200dip"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dip"
         android:text="@string/tv_facebook_login"
-        android:textStyle="normal" 
-        android:layout_marginBottom="50dip"/>
+        android:textSize="12sp"
+        android:textStyle="normal" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,6 +43,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/tv_email_login_details"
         android:textStyle="italic" />
 
@@ -48,8 +51,9 @@
         android:id="@+id/email_login_button"
         android:layout_width="200dip"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dip"
         android:text="@string/btn_email_login"
-        android:textStyle="normal"
-         android:layout_marginBottom="50dip"/>
+        android:textSize="12sp"
+        android:textStyle="normal" />
 
 </LinearLayout>
