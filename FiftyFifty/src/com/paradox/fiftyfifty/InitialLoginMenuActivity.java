@@ -22,8 +22,14 @@ public class InitialLoginMenuActivity extends Activity {
 	}
 	
 	public void toFuckingSomething(View view) {
-		Intent intent = new Intent(this, SubmitQuestionActivity.class);
+		Intent intent = new Intent(this, MainMenuActivity.class);
 		startActivity(intent);
 	}
+	
+	public void toEmailCreateAccountActivity(View view) {
+		Intent intent = new Intent(this, EmailCreateAccountActivity.class);
+		startActivity(intent);
+	}
+
 
 }
