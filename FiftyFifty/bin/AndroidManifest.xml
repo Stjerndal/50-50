@@ -35,6 +35,10 @@
             android:name="com.paradox.fiftyfifty.SubmitQuestionActivity"
             android:label="@string/title_activity_submit_question" >
         </activity>
+        <activity
+            android:name="com.paradox.fiftyfifty.MainMenuActivity"
+            android:label="@string/title_activity_main_menu" >
+        </activity>
     </application>
 
 </manifest>
