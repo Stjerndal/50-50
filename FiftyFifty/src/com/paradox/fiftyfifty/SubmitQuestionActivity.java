@@ -51,7 +51,9 @@ public class SubmitQuestionActivity extends Activity {
 			question.setUserID(userID);
 			DBHandler dbhandler = new DBHandler();
 			dbhandler.submitQuestion(question);
+			
 			Intent intent = new Intent(this, MainMenuActivity.class);
+			startActivity(intent);
 		}
 		else{
 			//do nothing
