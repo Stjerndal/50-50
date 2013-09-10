@@ -19,7 +19,7 @@
     <EditText
         android:id="@+id/editText1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="0.17"
         android:ems="10"
         android:hint="@string/activity_submit_question_hint_submit"
@@ -48,12 +48,14 @@
         android:id="@+id/button1"
         android:layout_width="168dp"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:onClick="submitQuestion"
+        android:text="@string/activity_suvmit_question_button_submit" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="164dp"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:onClick="cancel"
+        android:text="@string/activity_suvmit_question_button_cancel" />
 
 </LinearLayout>
