@@ -18,5 +18,6 @@
     <string name="my_profile">My profile</string>
     <string name="one_vs_one">1 vs 1</string>
     <string name="title_activity_submit_question">SubmitQuestionActivity</string>
+    <string name="activity_submit_question_explanation">Submit your question by writing it in the question-field and then provid two answer alternatives below. Then click "Submit Question".</string>
 
 </resources>
