@@ -19,6 +19,8 @@
     <string name="one_vs_one">1 vs 1</string>
     <string name="username">Username</string>
     <string name="email_address">Email Address</string>
+    <string name="signup">Sign Up</string>
+    <string name="login">Log In</string>
     <string name="title_activity_submit_question">SubmitQuestionActivity</string>
     <string name="activity_submit_question_explanation">Submit your question by writing it in the question-field and then provid two answer alternatives below. Then click "Submit Question".</string>
     <string name="activity_submit_question_hint_submit">Write your question here!</string>
