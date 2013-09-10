@@ -3,7 +3,11 @@
 
     <string name="app_name">FiftyFifty</string>
     <string name="action_settings">Settings</string>
-    <string name="tw_facebook_login">Login With Facebook</string>
+    <string name="tv_facebook_login">Login With Facebook</string>
+    <string name="tv_facebook_login_details">Play with friends, continue current games, and share your vitocries. We will never post on your wall without asking.</string>
+    <string name="tv_email_login">Login With Email</string>
+    <string name="tv_email_login_details">Sign up or login using your email address or username</string>
+    <string name="btn_email_login">Login With Email or Username</string>
     <string name="title_activity_initial_login_menu">InitialLoginMenuActivity</string>
     <string name="title_activity_main_menu">Main_menu</string>
     <string name="hello_world">Hello world!</string>
