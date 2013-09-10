@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.17"
         android:ems="10"
+        android:hint="@string/activity_submit_question_hint_submit"
         android:inputType="textMultiLine" >
 
         <requestFocus />
@@ -32,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/activity_submit_question_hint_alternative_1"
         android:inputType="textMultiLine" />
 
     <EditText
@@ -39,6 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/activity_submit_question_hint_alternative_2"
         android:inputType="textMultiLine" />
 
     <Button
