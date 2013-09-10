@@ -24,9 +24,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080008;
-        public static final int editText1=0x7f080006;
-        public static final int editText2=0x7f080007;
+        public static final int action_settings=0x7f080006;
         public static final int guess_popular=0x7f080001;
         public static final int honest_button=0x7f080000;
         public static final int leaderboards=0x7f080003;
@@ -58,6 +56,7 @@ public final class R {
         public static final int submit_question=0x7f050008;
         public static final int title_activity_initial_login_menu=0x7f050003;
         public static final int title_activity_main_menu=0x7f050004;
+        public static final int title_activity_submit_question=0x7f05000c;
         public static final int tw_facebook_login=0x7f050002;
     }
     public static final class style {
