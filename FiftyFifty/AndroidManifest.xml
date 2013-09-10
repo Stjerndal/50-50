@@ -13,15 +13,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.paradox.fiftyfifty.MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        
         <activity
             android:name="com.paradox.fiftyfifty.InitialLoginMenuActivity"
             android:label="@string/title_activity_initial_login_menu" >
@@ -38,6 +30,10 @@
         <activity
             android:name="com.paradox.fiftyfifty.MainMenuActivity"
             android:label="@string/title_activity_main_menu" >
+        </activity>
+        <activity
+            android:name="com.paradox.fiftyfifty.EmailCreateAccountActivity"
+            android:label="@string/title_activity_email_create_account" >
         </activity>
     </application>
 
