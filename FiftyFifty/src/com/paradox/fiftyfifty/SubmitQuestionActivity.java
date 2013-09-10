@@ -64,5 +64,6 @@ public class SubmitQuestionActivity extends Activity {
 	public void cancel(View view){
 		//leave to previous activity
 		Intent intent = new Intent(this, MainMenuActivity.class);
+		startActivity(intent);
 	}
 }
