@@ -2,6 +2,8 @@ package com.paradox.fiftyfifty;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
@@ -26,8 +28,28 @@ public class MainMenuActivity extends Activity {
 	}
 	
 	public void toSubmitQuestionsActivity(View view){
+		if(user.amountOfQuestionSpots() > 0){
 		Intent intent = new Intent(this, SubmitQuestionActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
 		startActivity(intent);
+		}
+		else{
+			AlertDialog.Builder popup = new AlertDialog.Builder(this);
+			popup.setTitle("Not enough questions answered!");
+			popup.setMessage("You need to answer more honest questions before you can submit a new question!");
+			popup.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) { 
+					// continue with delete
+				}
+			});
+			//		    popup.setNegativeButton("No", new DialogInterface.OnClickListener() {
+			//		        public void onClick(DialogInterface dialog, int which) { 
+			//		            // do nothing
+			//		        }
+			//		     });
+			popup.show();
+		}
+		
 	}
 	
 	public void toMyProfileActivity(View view) {
@@ -44,21 +66,25 @@ public class MainMenuActivity extends Activity {
 	
 	public void toHonestQuestionActivity(View view){
 		Intent intent = new Intent(this, HonestQuestionActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
 		startActivity(intent);
 	}
 	
 	public void toPopularOpinionActivity(View view){
 		Intent intent = new Intent(this, PopularOpinionActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
 		startActivity(intent);
 	}
 	
 	public void toLeaderboardsActivity(View view){
 		Intent intent = new Intent(this, LeaderboardsActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
 		startActivity(intent);
 	}
 	
 	public void toOneVsOneActivity(View view){
 		Intent intent = new Intent(this, OneVsOneActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
 		startActivity(intent);
 	}
 
