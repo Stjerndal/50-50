@@ -10,11 +10,15 @@ import android.view.View;
 import android.widget.EditText;
 
 public class SubmitQuestionActivity extends Activity {
+	private User user;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_submit_question);
+
+		Bundle b = getIntent().getExtras();
+		user = b.getParcelable(V.KEY_CURRENT_USER);
 	}
 
 	@Override
@@ -50,28 +54,30 @@ public class SubmitQuestionActivity extends Activity {
 			question.setQuestionText(questionText);
 			question.setAnswer1(answer1);
 			question.setAnswer2(answer2);
-			question.setUserID(userID);
+			question.setUserID(user.getUserID());
 			DBHandler dbhandler = new DBHandler();
 			dbhandler.submitQuestion(question);
-			
+			user.submittedNewQuestion();
+
 			Intent intent = new Intent(this, MainMenuActivity.class);
+			intent.putExtra(V.KEY_CURRENT_USER, user);
 			startActivity(intent);
 		}
 		else{
 			AlertDialog.Builder popup = new AlertDialog.Builder(this);
 			popup.setTitle("Complete the submission!");
-		    popup.setMessage("You need to fill in all information to submit a question!");
-		    popup.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-		        public void onClick(DialogInterface dialog, int which) { 
-		            // continue with delete
-		        }
-		     });
-//		    popup.setNegativeButton("No", new DialogInterface.OnClickListener() {
-//		        public void onClick(DialogInterface dialog, int which) { 
-//		            // do nothing
-//		        }
-//		     });
-		     popup.show();
+			popup.setMessage("You need to fill in all information to submit a question!");
+			popup.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) { 
+					// continue with delete
+				}
+			});
+			//		    popup.setNegativeButton("No", new DialogInterface.OnClickListener() {
+			//		        public void onClick(DialogInterface dialog, int which) { 
+			//		            // do nothing
+			//		        }
+			//		     });
+			popup.show();
 		}
 
 	}
@@ -79,6 +85,7 @@ public class SubmitQuestionActivity extends Activity {
 	public void cancel(View view){
 		//leave to previous activity
 		Intent intent = new Intent(this, MainMenuActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
 		startActivity(intent);
 	}
 }
