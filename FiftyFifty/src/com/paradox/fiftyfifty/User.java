@@ -255,8 +255,8 @@ public class User implements Parcelable {
 	 * @return the amount of questions the user can submit
 	 */
 	public int amountOfQuestionSpots() {
-		return (numberOfQuestionsAnswered - (numberOfSubmittedQuestions * V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT))
-				/ V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT;
+		return (numberOfQuestionsAnswered / V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT)
+				- numberOfSubmittedQuestions;
 	}
 
 	/**
