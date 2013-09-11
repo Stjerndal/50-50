@@ -29,7 +29,7 @@ public class InitialLoginMenuActivity extends Activity {
 		newFacebookUser.setRealName(V.TMP_USER_REAL_NAME);
 		newFacebookUser.setUserID(V.TMP_USER_ID);
 		newFacebookUser.setNumberOfQuestionsAnswered(V.TMP_NUMBER_OF_QUESTIONS_ANSWERED);
-		newFacebookUser.setNumberOfQuestionsSubmitted(V.TMP_NUMBER_OF_QUESTIONS_SUBMITTED);
+		newFacebookUser.setNumberOfSubmittedQuestions(V.TMP_NUMBER_OF_QUESTIONS_SUBMITTED);
 
 		Intent intent = new Intent(this, FacebookUsernameActivity.class);
 		intent.putExtra(V.KEY_CURRENT_USER, newFacebookUser);

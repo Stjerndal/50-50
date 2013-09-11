@@ -27,7 +27,7 @@ public class MyProfileActivity extends Activity {
 		out.append("\nPassword: \t\t" + user.getPassword());
 		
 		out.append("\nAnswered Qs: \t" + user.getNumberOfQuestionsAnswered());
-		out.append("\nSubmitted Qs: \t" + user.getNumberOfQuestionsSubmitted());
+		out.append("\nSubmitted Qs: \t" + user.getNumberOfSubmittedQuestions());
 		out.append("\nQ Spots: \t\t" + user.amountOfQuestionSpots());
 		out.append("\nQs left: \t\t" + user.remainingQuestionsRequiredForNewQuestionSpot());
 		

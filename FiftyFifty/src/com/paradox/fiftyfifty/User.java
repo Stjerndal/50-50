@@ -321,12 +321,12 @@ public class User implements Parcelable {
 		this.numberOfQuestionsAnswered = numberOfQuestionsAnswered;
 	}
 
-	public int getNumberOfQuestionsSubmitted() {
+	public int getNumberOfSubmittedQuestions() {
 		return numberOfSubmittedQuestions;
 	}
 
-	public void setNumberOfQuestionsSubmitted(int numberOfQuestionsSubmitted) {
-		this.numberOfSubmittedQuestions = numberOfQuestionsSubmitted;
+	public void setNumberOfSubmittedQuestions(int numberOfSubmittedQuestions) {
+		this.numberOfSubmittedQuestions = numberOfSubmittedQuestions;
 	}
 
 	public int getPointsTotal() {
