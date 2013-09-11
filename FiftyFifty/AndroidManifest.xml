@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.paradox.fiftyfifty.InitialLoginMenuActivity"
-            android:label="@string/title_activity_initial_login_menu" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
