@@ -24,6 +24,8 @@
     <string name="tv_new_player">New Player?</string>
     <string name="tv_signup_details">Sign up to play 50/50. Don \'t worry, we won\'t share your email address with anyone.</string>
     <string name="tv_login_details">Already have an account?</string>
+    <string name="tv_facebook_username_headline">"Choose a Username"</string>
+    <string name="tv_facebook_username_details">Please create a new username.</string>
     <string name="title_activity_submit_question">SubmitQuestionActivity</string>
     <string name="activity_submit_question_explanation">Submit your question by writing it in the question-field and then provid two answer alternatives below. Then click "Submit Question".</string>
     <string name="activity_submit_question_hint_submit">Write your question here!</string>
@@ -32,5 +34,7 @@
     <string name="activity_suvmit_question_button_submit">Submit Question</string>
     <string name="activity_suvmit_question_button_cancel">Cancel</string>
     <string name="title_activity_email_create_account">EmailCreateAccountActivity</string>
+    <string name="title_activity_facebook_username">FacebookUsernameActivity</string>
+    <string name="confirm">Confirm</string>
 
 </resources>
