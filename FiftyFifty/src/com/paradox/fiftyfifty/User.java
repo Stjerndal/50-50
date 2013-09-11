@@ -265,6 +265,13 @@ public class User implements Parcelable {
 
 	}
 
+	/**
+	 * The user submitted a question, call this to increase the stat
+	 */
+	public void submittedNewQuestion() {
+		numberOfQuestionsSubmitted++;
+	}
+
 	public String getUserID() {
 		return userID;
 	}
