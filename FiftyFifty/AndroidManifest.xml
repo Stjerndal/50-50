@@ -46,6 +46,10 @@
             android:name="com.paradox.fiftyfifty.MyProfileActivity"
             android:label="@string/title_activity_my_profile" >
         </activity>
+        <activity
+            android:name="com.paradox.fiftyfifty.HonestQuestionActivity"
+            android:label="@string/title_activity_honest_question" >
+        </activity>
     </application>
 
 </manifest>

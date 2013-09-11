@@ -44,5 +44,6 @@
     <string name="email_or_username">Email or username</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_my_profile">MyProfileActivity</string>
+    <string name="title_activity_honest_question">Honest Question Activity</string>
 
 </resources>
