@@ -45,5 +45,8 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_my_profile">MyProfileActivity</string>
     <string name="title_activity_honest_question">Honest Question Activity</string>
+    <string name="title_activity_leaderboards">LeaderboardsActivity</string>
+    <string name="title_activity_one_vs_one">OneVsOneActivity</string>
+    <string name="title_activity_popular_opinion">PopularOpinionActivity</string>
 
 </resources>
