@@ -2,6 +2,8 @@ package com.paradox.fiftyfifty;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
@@ -56,7 +58,20 @@ public class SubmitQuestionActivity extends Activity {
 			startActivity(intent);
 		}
 		else{
-			//do nothing
+			AlertDialog.Builder popup = new AlertDialog.Builder(this);
+			popup.setTitle("Complete the submission!");
+		    popup.setMessage("You need to fill in all information to submit a question!");
+		    popup.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+		        public void onClick(DialogInterface dialog, int which) { 
+		            // continue with delete
+		        }
+		     });
+		    popup.setNegativeButton("No", new DialogInterface.OnClickListener() {
+		        public void onClick(DialogInterface dialog, int which) { 
+		            // do nothing
+		        }
+		     });
+		     popup.show();
 		}
 
 	}
