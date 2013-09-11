@@ -26,6 +26,24 @@ public class MyProfileActivity extends Activity {
 		out.append("\nEmail: \t\t" + user.getEmailAddress());
 		out.append("\nPassword: \t\t" + user.getPassword());
 		
+		out.append("\nAnswered Qs: \t" + user.getNumberOfQuestionsAnswered());
+		out.append("\nSubmitted Qs: \t" + user.getNumberOfQuestionsSubmitted());
+		out.append("\nQ Spots: \t\t" + user.amountOfQuestionSpots());
+		out.append("\nQs left: \t\t" + user.remainingQuestionsRequiredForNewQuestionSpot());
+		
+		out.append("\nPoints Total: \t" + user.getPointsTotal());
+		out.append("\nPoints GuessPop: \t" + user.getPointsGuessPopular());
+		out.append("\nPoints SubQs: \t" + user.getPointsSubmittedQuestions());
+		out.append("\nPoints 1v1: \t" + user.getPoints1v1());
+		
+		out.append("\nSubmitted qIDs:\t" + "[");
+		if(!user.getQuestionIDs().isEmpty()) {
+		for(String qID : user.getQuestionIDs()) {
+			out.append(qID + ",");
+		}
+		out.deleteCharAt(out.length()-1);
+		}
+		out.append("]");
 		
 		outTextView.setText(out.toString());
 		
