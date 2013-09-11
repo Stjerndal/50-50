@@ -243,7 +243,8 @@ public class User implements Parcelable {
 	 * @return the amount of questions remaining
 	 */
 	public int remainingQuestionsRequiredForNewQuestionSpot() {
-		return numberOfQuestionsAnswered - (numberOfQuestionsSubmitted * V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT);
+		return ((1 + numberOfQuestionsSubmitted + amountOfQuestionSpots()) * V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT)
+				- numberOfQuestionsAnswered;
 	}
 
 	/**
