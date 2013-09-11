@@ -16,6 +16,7 @@ public class User implements Parcelable {
 	private String userName;
 	private String realName;
 	private String emailAddress;
+	private String password;
 
 	private int numberOfQuestionsAnswered;
 
@@ -45,7 +46,7 @@ public class User implements Parcelable {
 		this.userID = "";
 		this.userName = "";
 		this.realName = "";
-		this.emailAddress = "";
+		this.emailAddress = "";this.password="";
 		this.numberOfQuestionsAnswered = 0;
 		this.pointsTotal = 0;
 		this.points1v1 = 0;
@@ -65,7 +66,7 @@ public class User implements Parcelable {
 		this.userID = userName;
 		this.userName = userName;
 		this.realName = "";
-		this.emailAddress = "";
+		this.emailAddress = "";this.password="";
 		this.numberOfQuestionsAnswered = 0;
 		this.pointsTotal = 0;
 		this.points1v1 = 0;
@@ -89,6 +90,7 @@ public class User implements Parcelable {
 		this.userName = userName;
 		this.realName = "";
 		this.emailAddress = emailAddress;
+		this.password="";
 		this.numberOfQuestionsAnswered = 0;
 		this.pointsTotal = 0;
 		this.points1v1 = 0;
@@ -114,6 +116,7 @@ public class User implements Parcelable {
 		this.userName = userName;
 		this.realName = realName;
 		this.emailAddress = emailAddress;
+		this.password="";
 		this.numberOfQuestionsAnswered = 0;
 		this.pointsTotal = 0;
 		this.points1v1 = 0;
@@ -138,6 +141,7 @@ public class User implements Parcelable {
 		// private String userName;
 		// private String realName;
 		// private String emailAddress;
+		// private String password;
 		//
 		// private int numberOfQuestionsAnswered;
 		//
@@ -154,6 +158,7 @@ public class User implements Parcelable {
 		dest.writeString(userName);
 		dest.writeString(realName);
 		dest.writeString(emailAddress);
+		dest.writeString(password);
 
 		dest.writeInt(numberOfQuestionsAnswered);
 		dest.writeInt(pointsTotal);
@@ -177,6 +182,7 @@ public class User implements Parcelable {
 		userName = in.readString();
 		realName = in.readString();
 		emailAddress = in.readString();
+		password=in.readString();
 		numberOfQuestionsAnswered = in.readInt();
 		pointsTotal = in.readInt();
 		pointsGuessPopular = in.readInt();

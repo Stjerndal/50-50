@@ -1,10 +1,14 @@
 package com.paradox.fiftyfifty;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.EditText;
 
 public class EmailCreateAccountActivity extends Activity {
+	private User user;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +21,17 @@ public class EmailCreateAccountActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.email_create_account, menu);
 		return true;
+	}
+	
+	public void toMainMenu(View view) {
+		
+		EditText inputEmail = (EditText) findViewById(R.id.et_reg_email_address);
+		EditText inputUsername = (EditText) findViewById(R.id.et_reg_username);
+		user = new User(inputUsername.getText().toString(),inputEmail.getText().toString());		
+		
+		Intent intent = new Intent(this, MainMenuActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
+		startActivity(intent);
 	}
 
 }
