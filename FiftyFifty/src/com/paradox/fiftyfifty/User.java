@@ -51,6 +51,7 @@ public class User implements Parcelable {
 		this.points1v1 = 0;
 		this.pointsGuessPopular = 0;
 		this.pointsSubmittedQuestions = 0;
+		questionIDs = new ArrayList<String>();
 	}
 
 	/**
@@ -70,6 +71,7 @@ public class User implements Parcelable {
 		this.points1v1 = 0;
 		this.pointsGuessPopular = 0;
 		this.pointsSubmittedQuestions = 0;
+		questionIDs = new ArrayList<String>();
 	}
 
 	/**
@@ -92,6 +94,7 @@ public class User implements Parcelable {
 		this.points1v1 = 0;
 		this.pointsGuessPopular = 0;
 		this.pointsSubmittedQuestions = 0;
+		questionIDs = new ArrayList<String>();
 	}
 
 	/**
@@ -116,6 +119,7 @@ public class User implements Parcelable {
 		this.points1v1 = 0;
 		this.pointsGuessPopular = 0;
 		this.pointsSubmittedQuestions = 0;
+		questionIDs = new ArrayList<String>();
 	}
 
 	@Override
@@ -143,7 +147,7 @@ public class User implements Parcelable {
 		// private int points1v1;
 		//
 		// private ArrayList<String> questionIDs;
-		
+
 		dest.writeInt(AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT);
 
 		dest.writeString(userID);
@@ -156,8 +160,8 @@ public class User implements Parcelable {
 		dest.writeInt(pointsGuessPopular);
 		dest.writeInt(pointsSubmittedQuestions);
 		dest.writeInt(points1v1);
-		
-		for(int i = 0; i < questionIDs.size();i++) {
+
+		for (int i = 0; i < questionIDs.size(); i++) {
 			dest.writeString(questionIDs.get(i));
 		}
 	}
@@ -178,9 +182,9 @@ public class User implements Parcelable {
 		pointsGuessPopular = in.readInt();
 		pointsSubmittedQuestions = in.readInt();
 		points1v1 = in.readInt();
-		
+
 		questionIDs = new ArrayList<String>();
-		for(int i = 0; i < questionIDs.size();i++) {
+		for (int i = 0; i < questionIDs.size(); i++) {
 			questionIDs.add(in.readString());
 		}
 	}

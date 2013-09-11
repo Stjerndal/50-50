@@ -23,13 +23,13 @@ public class InitialLoginMenuActivity extends Activity {
 		return true;
 	}
 
-	public void toFuckingSomething(View view) {
+	public void toFacebookUsernameActivity(View view) {
 		User newFacebookUser = new User();
 		newFacebookUser.setEmailAddress(V.TMP_USER_EMAIL);
 		newFacebookUser.setRealName(V.TMP_USER_REAL_NAME);
 
-		Intent intent = new Intent(this, MainMenuActivity.class);
-		intent.putExtra(V.FLAG_CURRENT_USER, newFacebookUser);
+		Intent intent = new Intent(this, FacebookUsernameActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, newFacebookUser);
 		startActivity(intent);
 	}
 
