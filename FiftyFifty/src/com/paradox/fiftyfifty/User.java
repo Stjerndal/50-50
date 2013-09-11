@@ -136,23 +136,23 @@ public class User implements Parcelable {
 		// parcel. When we read from parcel, they
 		// will come back in the same order
 
-		// static final int AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT
-		// private String userID;
-		// private String userName;
-		// private String realName;
-		// private String emailAddress;
-		// private String password;
-		//
-		// private int numberOfQuestionsAnswered;
-		//
-		// private int pointsTotal;
-		// private int pointsGuessPopular;
-		// private int pointsSubmittedQuestions;
-		// private int points1v1;
-		//
-		// private ArrayList<String> questionIDs;
+//		static final int AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT = 5;
+//
+//		private String userID;
+//		private String userName;
+//		private String realName;
+//		private String emailAddress;
+//		private String password;
+//
+//		private int numberOfQuestionsAnswered;
+//
+//		private int pointsTotal;
+//		private int pointsGuessPopular;
+//		private int pointsSubmittedQuestions;
+//		private int points1v1;
+//
+//		private ArrayList<String> questionIDs;
 
-		dest.writeInt(AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT);
 
 		dest.writeString(userID);
 		dest.writeString(userName);
@@ -161,6 +161,7 @@ public class User implements Parcelable {
 		dest.writeString(password);
 
 		dest.writeInt(numberOfQuestionsAnswered);
+		
 		dest.writeInt(pointsTotal);
 		dest.writeInt(pointsGuessPopular);
 		dest.writeInt(pointsSubmittedQuestions);
@@ -178,12 +179,30 @@ public class User implements Parcelable {
 	private void readFromParcel(Parcel in) {
 		// We just need to read back each
 		// field in the order that it was written to the parcel
+		
+//		private String userID;
+//		private String userName;
+//		private String realName;
+//		private String emailAddress;
+//		private String password;
+//
+//		private int numberOfQuestionsAnswered;
+//
+//		private int pointsTotal;
+//		private int pointsGuessPopular;
+//		private int pointsSubmittedQuestions;
+//		private int points1v1;
+//
+//		private ArrayList<String> questionIDs;
+		
 		userID = in.readString();
 		userName = in.readString();
 		realName = in.readString();
 		emailAddress = in.readString();
 		password=in.readString();
+		
 		numberOfQuestionsAnswered = in.readInt();
+		
 		pointsTotal = in.readInt();
 		pointsGuessPopular = in.readInt();
 		pointsSubmittedQuestions = in.readInt();
