@@ -291,6 +291,14 @@ public class User implements Parcelable {
 		this.emailAddress = emailAddress;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	public int getNumberOfQuestionsAnswered() {
 		return numberOfQuestionsAnswered;
 	}

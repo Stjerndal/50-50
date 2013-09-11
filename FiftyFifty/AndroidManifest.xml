@@ -38,6 +38,10 @@
             android:name="com.paradox.fiftyfifty.FacebookUsernameActivity"
             android:label="@string/title_activity_facebook_username" >
         </activity>
+        <activity
+            android:name="com.paradox.fiftyfifty.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
     </application>
 
 </manifest>

@@ -8,12 +8,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".FacebookUsernameActivity" >
+    tools:context=".LoginActivity" >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tv_facebook_username_headline"
+        android:text="@string/login"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -21,26 +21,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/tv_facebook_username_details"
+        android:text="@string/tv_login_details"
         android:textStyle="italic" />
 
     <EditText
-        android:id="@+id/et_facebook_username"
+        android:id="@+id/et_login_username_or_email"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/username"
-        android:inputType="text" >
+        android:hint="@string/email_or_username"
+        android:inputType="textEmailAddress" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_login_password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword" >
     </EditText>
 
     <Button
-        android:id="@+id/btn_confirm"
+        android:id="@+id/btn_login"
         android:layout_width="100dip"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dip"
         android:gravity="center"
-        android:onClick="toMainMenuActivity"
-        android:text="@string/confirm"
+        android:onClick="toMainMenu"
+        android:text="@string/login"
         android:textSize="12sp"
         android:textStyle="normal" />
 

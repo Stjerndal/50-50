@@ -24,8 +24,8 @@
         android:layout_alignLeft="@+id/honestQuestion"
         android:layout_below="@+id/honestQuestion"
         android:layout_marginTop="71dp"
-        android:text="Cats"
-        android:onClick="buttonPressed" />
+        android:onClick="buttonPressed"
+        android:text="Cats" />
 
     <Button
         android:id="@+id/honestAnswer2"
@@ -35,8 +35,8 @@
         android:layout_alignBottom="@+id/honestAnswer1"
         android:layout_alignRight="@+id/honestQuestion"
         android:layout_marginRight="34dp"
-        android:text="Dogs"
-        android:onClick="buttonPressed" />
+        android:onClick="buttonPressed"
+        android:text="Dogs" />
 
     <TextView
         android:id="@+id/feedback"

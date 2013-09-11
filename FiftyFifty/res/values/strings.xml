@@ -21,9 +21,10 @@
     <string name="email_address">Email Address</string>
     <string name="signup">Sign Up</string>
     <string name="login">Login</string>
+    <string name="password">Password</string>
     <string name="tv_new_player">New Player?</string>
     <string name="tv_signup_details">Sign up to play 50/50. Don \'t worry, we won\'t share your email address with anyone.</string>
-    <string name="tv_login_details">Already have an account?</string>
+    <string name="tv_login_already_details">Already have an account?</string>
     <string name="tv_facebook_username_headline">"Choose a Username"</string>
     <string name="tv_facebook_username_details">Please create a new username.</string>
     <string name="title_activity_submit_question">SubmitQuestionActivity</string>
@@ -36,5 +37,10 @@
     <string name="title_activity_email_create_account">EmailCreateAccountActivity</string>
     <string name="title_activity_facebook_username">FacebookUsernameActivity</string>
     <string name="confirm">Confirm</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="tv_login_details">Enter your username or email address.</string>
+    <string name="tv_forgot_password_details">Don\'t remember your password?</string>
+    <string name="btn_email_reminder">Send Email Reminder</string>
+    <string name="email_or_username">Email or username</string>
 
 </resources>

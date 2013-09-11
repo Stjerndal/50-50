@@ -23,7 +23,7 @@ public class EmailCreateAccountActivity extends Activity {
 		return true;
 	}
 	
-	public void toMainMenu(View view) {
+	public void toMainMenuActivity(View view) {
 		
 		EditText inputEmail = (EditText) findViewById(R.id.et_reg_email_address);
 		EditText inputUsername = (EditText) findViewById(R.id.et_reg_username);
@@ -31,6 +31,11 @@ public class EmailCreateAccountActivity extends Activity {
 		
 		Intent intent = new Intent(this, MainMenuActivity.class);
 		intent.putExtra(V.KEY_CURRENT_USER, user);
+		startActivity(intent);
+	}
+	
+	public void toLoginActivity(View view) {
+		Intent intent = new Intent(this, LoginActivity.class);
 		startActivity(intent);
 	}
 
