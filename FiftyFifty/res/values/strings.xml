@@ -42,5 +42,7 @@
     <string name="tv_forgot_password_details">Don\'t remember your password?</string>
     <string name="btn_email_reminder">Send Email Reminder</string>
     <string name="email_or_username">Email or username</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_my_profile">MyProfileActivity</string>
 
 </resources>

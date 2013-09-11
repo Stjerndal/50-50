@@ -7,11 +7,15 @@ import android.view.Menu;
 import android.view.View;
 
 public class MainMenuActivity extends Activity {
+	private User user;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
+		
+		Bundle b = getIntent().getExtras();
+		user = b.getParcelable(V.KEY_CURRENT_USER);
 	}
 
 	@Override
@@ -21,9 +25,16 @@ public class MainMenuActivity extends Activity {
 		return true;
 	}
 	
-	public void submit(View view){
+	public void toSubmitQuestionsActivity(View view){
 		Intent intent = new Intent(this, SubmitQuestionActivity.class);
 		startActivity(intent);
 	}
+	
+	public void toMyProfileActivity(View view) {
+		Intent intent = new Intent(this, MyProfileActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
+		startActivity(intent);
+	}
+
 
 }
