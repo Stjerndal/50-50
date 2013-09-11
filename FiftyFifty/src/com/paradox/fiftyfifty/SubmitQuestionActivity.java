@@ -61,16 +61,16 @@ public class SubmitQuestionActivity extends Activity {
 			AlertDialog.Builder popup = new AlertDialog.Builder(this);
 			popup.setTitle("Complete the submission!");
 		    popup.setMessage("You need to fill in all information to submit a question!");
-		    popup.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+		    popup.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 		        public void onClick(DialogInterface dialog, int which) { 
 		            // continue with delete
 		        }
 		     });
-		    popup.setNegativeButton("No", new DialogInterface.OnClickListener() {
-		        public void onClick(DialogInterface dialog, int which) { 
-		            // do nothing
-		        }
-		     });
+//		    popup.setNegativeButton("No", new DialogInterface.OnClickListener() {
+//		        public void onClick(DialogInterface dialog, int which) { 
+//		            // do nothing
+//		        }
+//		     });
 		     popup.show();
 		}
 
