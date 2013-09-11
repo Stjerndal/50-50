@@ -12,6 +12,7 @@ public class InitialLoginMenuActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_initial_login_menu);
+		
 	}
 
 	@Override
@@ -22,7 +23,10 @@ public class InitialLoginMenuActivity extends Activity {
 	}
 	
 	public void toFuckingSomething(View view) {
+		User user = new User(", emailAddress)
+		
 		Intent intent = new Intent(this, MainMenuActivity.class);
+		intent.putExtra(V.FLAG_USER_ID, userID);
 		startActivity(intent);
 	}
 	
