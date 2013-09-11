@@ -50,6 +50,18 @@
             android:name="com.paradox.fiftyfifty.HonestQuestionActivity"
             android:label="@string/title_activity_honest_question" >
         </activity>
+        <activity
+            android:name="com.paradox.fiftyfifty.LeaderboardsActivity"
+            android:label="@string/title_activity_leaderboards" >
+        </activity>
+        <activity
+            android:name="com.paradox.fiftyfifty.OneVsOneActivity"
+            android:label="@string/title_activity_one_vs_one" >
+        </activity>
+        <activity
+            android:name="com.paradox.fiftyfifty.PopularOpinionActivity"
+            android:label="@string/title_activity_popular_opinion" >
+        </activity>
     </application>
 
 </manifest>
