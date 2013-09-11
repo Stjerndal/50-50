@@ -238,13 +238,12 @@ public class User implements Parcelable {
 
 	/**
 	 * Calculate the amount of questions remaining to be answered before the
-	 * user can sumit a new question
+	 * user can sumit another question
 	 * 
 	 * @return the amount of questions remaining
 	 */
-	public int remainingQuestionsRequiredToSubmit() {
-		return numberOfQuestionsAnswered
-				% V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT;
+	public int remainingQuestionsRequiredForNewQuestionSpot() {
+		return numberOfQuestionsAnswered - (numberOfQuestionsSubmitted * V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT);
 	}
 
 	/**
