@@ -24,6 +24,8 @@ public class MyProfileActivity extends Activity {
 		out.append("\nReal Name: \t" + user.getRealName());
 		out.append("\nEmail: \t" + user.getEmailAddress());
 		out.append("\nPassword: \t" + user.getPassword());
+		
+		outTextView.setText(out.toString());
 	}
 
 	@Override
