@@ -29,6 +29,8 @@ public class LoginActivity extends Activity {
 		EditText inputPassword = (EditText) findViewById(R.id.et_login_password);
 		user = new User();
 		user.setPassword(inputPassword.getText().toString());
+		user.setUserID(V.TMP_USER_ID);
+		user.setRealName(V.TMP_USER_REAL_NAME);
 
 		String emailOrUsername = inputEmailOrUsername.getText().toString();
 		if (emailOrUsername.contains("@")) {
@@ -36,6 +38,7 @@ public class LoginActivity extends Activity {
 			user.setUserName(emailOrUsername.split("@")[0]);
 		} else {
 			user.setUserName(emailOrUsername);
+			user.setEmailAddress(V.TMP_USER_EMAIL);
 		}
 
 		Intent intent = new Intent(this, MainMenuActivity.class);
