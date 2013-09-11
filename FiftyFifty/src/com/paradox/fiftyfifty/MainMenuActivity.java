@@ -43,7 +43,22 @@ public class MainMenuActivity extends Activity {
 	}
 	
 	public void toHonestQuestionActivity(View view){
-		Intent intent = new Intent(this, SubmitQuestionActivity.class);
+		Intent intent = new Intent(this, HonestQuestionActivity.class);
+		startActivity(intent);
+	}
+	
+	public void toPopularOpinionActivity(View view){
+		Intent intent = new Intent(this, PopularOpinionActivity.class);
+		startActivity(intent);
+	}
+	
+	public void toLeaderboardsActivity(View view){
+		Intent intent = new Intent(this, LeaderboardsActivity.class);
+		startActivity(intent);
+	}
+	
+	public void toOneVsOneActivity(View view){
+		Intent intent = new Intent(this, OneVsOneActivity.class);
 		startActivity(intent);
 	}
 
