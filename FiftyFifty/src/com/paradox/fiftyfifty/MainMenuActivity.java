@@ -27,6 +27,7 @@ public class MainMenuActivity extends Activity {
 	
 	public void toSubmitQuestionsActivity(View view){
 		Intent intent = new Intent(this, SubmitQuestionActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
 		startActivity(intent);
 	}
 	
@@ -44,21 +45,25 @@ public class MainMenuActivity extends Activity {
 	
 	public void toHonestQuestionActivity(View view){
 		Intent intent = new Intent(this, HonestQuestionActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
 		startActivity(intent);
 	}
 	
 	public void toPopularOpinionActivity(View view){
 		Intent intent = new Intent(this, PopularOpinionActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
 		startActivity(intent);
 	}
 	
 	public void toLeaderboardsActivity(View view){
 		Intent intent = new Intent(this, LeaderboardsActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
 		startActivity(intent);
 	}
 	
 	public void toOneVsOneActivity(View view){
 		Intent intent = new Intent(this, OneVsOneActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
 		startActivity(intent);
 	}
 
