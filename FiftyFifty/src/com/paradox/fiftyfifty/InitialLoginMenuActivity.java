@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.View;
 
 public class InitialLoginMenuActivity extends Activity {
+	private static final String TMP_USER_EMAIL = "coolboy91@example.com";
+	private static final String TMP_USER_REAL_NAME = "Klas Bertilsson";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +25,12 @@ public class InitialLoginMenuActivity extends Activity {
 	}
 	
 	public void toFuckingSomething(View view) {
-		User user = new User(", emailAddress)
+		User newFacebookUser = new User();
+		newFacebookUser.setEmailAddress(TMP_USER_EMAIL);
+		newFacebookUser.setRealName(TMP_USER_REAL_NAME);
 		
 		Intent intent = new Intent(this, MainMenuActivity.class);
-		intent.putExtra(V.FLAG_USER_ID, userID);
+		intent.putExtra(V.FLAG_CURRENT_USER, newFacebookUser);
 		startActivity(intent);
 	}
 	
