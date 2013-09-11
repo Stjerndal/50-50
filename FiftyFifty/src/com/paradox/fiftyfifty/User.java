@@ -18,7 +18,7 @@ public class User implements Parcelable {
 	private String password;
 
 	private int numberOfQuestionsAnswered;
-	private int numberOfQuestionsSubmitted;
+	private int numberOfSubmittedQuestions;
 
 	private int pointsTotal;
 	private int pointsGuessPopular;
@@ -49,7 +49,7 @@ public class User implements Parcelable {
 		this.emailAddress = "";
 		this.password = "";
 		this.numberOfQuestionsAnswered = 0;
-		this.numberOfQuestionsSubmitted = 0;
+		this.numberOfSubmittedQuestions = 0;
 		this.pointsTotal = 0;
 		this.points1v1 = 0;
 		this.pointsGuessPopular = 0;
@@ -71,7 +71,7 @@ public class User implements Parcelable {
 		this.emailAddress = "";
 		this.password = "";
 		this.numberOfQuestionsAnswered = 0;
-		this.numberOfQuestionsSubmitted = 0;
+		this.numberOfSubmittedQuestions = 0;
 		this.pointsTotal = 0;
 		this.points1v1 = 0;
 		this.pointsGuessPopular = 0;
@@ -96,7 +96,7 @@ public class User implements Parcelable {
 		this.emailAddress = emailAddress;
 		this.password = "";
 		this.numberOfQuestionsAnswered = 0;
-		this.numberOfQuestionsSubmitted = 0;
+		this.numberOfSubmittedQuestions = 0;
 		this.pointsTotal = 0;
 		this.points1v1 = 0;
 		this.pointsGuessPopular = 0;
@@ -123,7 +123,7 @@ public class User implements Parcelable {
 		this.emailAddress = emailAddress;
 		this.password = "";
 		this.numberOfQuestionsAnswered = 0;
-		this.numberOfQuestionsSubmitted = 0;
+		this.numberOfSubmittedQuestions = 0;
 		this.pointsTotal = 0;
 		this.points1v1 = 0;
 		this.pointsGuessPopular = 0;
@@ -151,7 +151,7 @@ public class User implements Parcelable {
 		dest.writeString(password);
 
 		dest.writeInt(numberOfQuestionsAnswered);
-		dest.writeInt(numberOfQuestionsSubmitted);
+		dest.writeInt(numberOfSubmittedQuestions);
 
 		dest.writeInt(pointsTotal);
 		dest.writeInt(pointsGuessPopular);
@@ -178,7 +178,7 @@ public class User implements Parcelable {
 		password = in.readString();
 
 		numberOfQuestionsAnswered = in.readInt();
-		numberOfQuestionsSubmitted = in.readInt();
+		numberOfSubmittedQuestions = in.readInt();
 
 		pointsTotal = in.readInt();
 		pointsGuessPopular = in.readInt();
@@ -243,7 +243,9 @@ public class User implements Parcelable {
 	 * @return the amount of questions remaining
 	 */
 	public int remainingQuestionsRequiredForNewQuestionSpot() {
-		return ((1 + numberOfQuestionsSubmitted + amountOfQuestionSpots()) * V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT)
+		return (numberOfQuestionsAnswered
+				/ V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT + 1)
+				* V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT
 				- numberOfQuestionsAnswered;
 	}
 
@@ -253,9 +255,8 @@ public class User implements Parcelable {
 	 * @return the amount of questions the user can submit
 	 */
 	public int amountOfQuestionSpots() {
-		return (numberOfQuestionsAnswered - (numberOfQuestionsSubmitted * V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT))
-				% V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT;
-	}
+		  return numberOfQuestionsAnswered / V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT;
+		 }
 
 	/**
 	 * Method to be invoked when a user guessed the right popular opinion
@@ -269,7 +270,7 @@ public class User implements Parcelable {
 	 * The user submitted a question, call this to increase the stat
 	 */
 	public void submittedNewQuestion() {
-		numberOfQuestionsSubmitted++;
+		numberOfSubmittedQuestions++;
 	}
 
 	public String getUserID() {
@@ -321,11 +322,11 @@ public class User implements Parcelable {
 	}
 
 	public int getNumberOfQuestionsSubmitted() {
-		return numberOfQuestionsSubmitted;
+		return numberOfSubmittedQuestions;
 	}
 
 	public void setNumberOfQuestionsSubmitted(int numberOfQuestionsSubmitted) {
-		this.numberOfQuestionsSubmitted = numberOfQuestionsSubmitted;
+		this.numberOfSubmittedQuestions = numberOfQuestionsSubmitted;
 	}
 
 	public int getPointsTotal() {
