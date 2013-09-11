@@ -11,5 +11,8 @@ public class V {
 	public static final String TMP_USER_REAL_NAME = "Klas Bertilsson";
 	public static final String TMP_USER_ID = "1768231";
 	public static final String TMP_USERNAME = "coolboy92";
+	public static final int TMP_NUMBER_OF_QUESTIONS_ANSWERED = 47;
+	public static final int TMP_NUMBER_OF_QUESTIONS_SUBMITTED = 7;
+	
 
 }
