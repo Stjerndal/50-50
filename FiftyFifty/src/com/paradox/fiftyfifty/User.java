@@ -18,6 +18,7 @@ public class User implements Parcelable {
 	private String password;
 
 	private int numberOfQuestionsAnswered;
+	private int numberOfQuestionsSubmitted;
 
 	private int pointsTotal;
 	private int pointsGuessPopular;
@@ -45,8 +46,10 @@ public class User implements Parcelable {
 		this.userID = "";
 		this.userName = "";
 		this.realName = "";
-		this.emailAddress = "";this.password="";
+		this.emailAddress = "";
+		this.password = "";
 		this.numberOfQuestionsAnswered = 0;
+		this.numberOfQuestionsSubmitted = 0;
 		this.pointsTotal = 0;
 		this.points1v1 = 0;
 		this.pointsGuessPopular = 0;
@@ -65,8 +68,10 @@ public class User implements Parcelable {
 		this.userID = userName;
 		this.userName = userName;
 		this.realName = "";
-		this.emailAddress = "";this.password="";
+		this.emailAddress = "";
+		this.password = "";
 		this.numberOfQuestionsAnswered = 0;
+		this.numberOfQuestionsSubmitted = 0;
 		this.pointsTotal = 0;
 		this.points1v1 = 0;
 		this.pointsGuessPopular = 0;
@@ -89,8 +94,9 @@ public class User implements Parcelable {
 		this.userName = userName;
 		this.realName = "";
 		this.emailAddress = emailAddress;
-		this.password="";
+		this.password = "";
 		this.numberOfQuestionsAnswered = 0;
+		this.numberOfQuestionsSubmitted = 0;
 		this.pointsTotal = 0;
 		this.points1v1 = 0;
 		this.pointsGuessPopular = 0;
@@ -115,8 +121,9 @@ public class User implements Parcelable {
 		this.userName = userName;
 		this.realName = realName;
 		this.emailAddress = emailAddress;
-		this.password="";
+		this.password = "";
 		this.numberOfQuestionsAnswered = 0;
+		this.numberOfQuestionsSubmitted = 0;
 		this.pointsTotal = 0;
 		this.points1v1 = 0;
 		this.pointsGuessPopular = 0;
@@ -135,23 +142,7 @@ public class User implements Parcelable {
 		// parcel. When we read from parcel, they
 		// will come back in the same order
 
-//		static final int AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT = 5;
-//
-//		private String userID;
-//		private String userName;
-//		private String realName;
-//		private String emailAddress;
-//		private String password;
-//
-//		private int numberOfQuestionsAnswered;
-//
-//		private int pointsTotal;
-//		private int pointsGuessPopular;
-//		private int pointsSubmittedQuestions;
-//		private int points1v1;
-//
-//		private ArrayList<String> questionIDs;
-
+		// static final int AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT = 5;
 
 		dest.writeString(userID);
 		dest.writeString(userName);
@@ -160,7 +151,8 @@ public class User implements Parcelable {
 		dest.writeString(password);
 
 		dest.writeInt(numberOfQuestionsAnswered);
-		
+		dest.writeInt(numberOfQuestionsSubmitted);
+
 		dest.writeInt(pointsTotal);
 		dest.writeInt(pointsGuessPopular);
 		dest.writeInt(pointsSubmittedQuestions);
@@ -178,30 +170,16 @@ public class User implements Parcelable {
 	private void readFromParcel(Parcel in) {
 		// We just need to read back each
 		// field in the order that it was written to the parcel
-		
-//		private String userID;
-//		private String userName;
-//		private String realName;
-//		private String emailAddress;
-//		private String password;
-//
-//		private int numberOfQuestionsAnswered;
-//
-//		private int pointsTotal;
-//		private int pointsGuessPopular;
-//		private int pointsSubmittedQuestions;
-//		private int points1v1;
-//
-//		private ArrayList<String> questionIDs;
-		
+
 		userID = in.readString();
 		userName = in.readString();
 		realName = in.readString();
 		emailAddress = in.readString();
-		password=in.readString();
-		
+		password = in.readString();
+
 		numberOfQuestionsAnswered = in.readInt();
-		
+		numberOfQuestionsSubmitted = in.readInt();
+
 		pointsTotal = in.readInt();
 		pointsGuessPopular = in.readInt();
 		pointsSubmittedQuestions = in.readInt();
@@ -270,6 +248,16 @@ public class User implements Parcelable {
 	}
 
 	/**
+	 * Calculate the amount of questions the user can submit at this time.
+	 * 
+	 * @return the amount of questions the user can submit
+	 */
+	public int amountOfQuestionSpots() {
+		return (numberOfQuestionsAnswered - (numberOfQuestionsSubmitted * V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT))
+				% V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT;
+	}
+
+	/**
 	 * Method to be invoked when a user guessed the right popular opinion
 	 */
 	public void guessedCorrect() {
@@ -323,6 +311,14 @@ public class User implements Parcelable {
 
 	public void setNumberOfQuestionsAnswered(int numberOfQuestionsAnswered) {
 		this.numberOfQuestionsAnswered = numberOfQuestionsAnswered;
+	}
+
+	public int getNumberOfQuestionsSubmitted() {
+		return numberOfQuestionsSubmitted;
+	}
+
+	public void setNumberOfQuestionsSubmitted(int numberOfQuestionsSubmitted) {
+		this.numberOfQuestionsSubmitted = numberOfQuestionsSubmitted;
 	}
 
 	public int getPointsTotal() {
