@@ -10,7 +10,6 @@ import android.os.Parcelable;
  * 
  */
 public class User implements Parcelable {
-	static final int AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT = 5;
 
 	private String userID;
 	private String userName;
@@ -267,7 +266,7 @@ public class User implements Parcelable {
 	 */
 	public int remainingQuestionsRequiredToSubmit() {
 		return numberOfQuestionsAnswered
-				% AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT;
+				% V.AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT;
 	}
 
 	/**
@@ -340,10 +339,6 @@ public class User implements Parcelable {
 
 	public void setQuestionIDs(ArrayList<String> questionIDs) {
 		this.questionIDs = questionIDs;
-	}
-
-	public static int getAmountOfQuestionsRequiredToSubmit() {
-		return AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT;
 	}
 
 	public int getPointsGuessPopular() {
