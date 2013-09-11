@@ -41,6 +41,11 @@ public class MainMenuActivity extends Activity {
 //		intent.putExtra(V.KEY_CURRENT_USER, newUser);
 //		startActivity(intent);
 	}
+	
+	public void toHonestQuestionActivity(View view){
+		Intent intent = new Intent(this, SubmitQuestionActivity.class);
+		startActivity(intent);
+	}
 
 
 }
