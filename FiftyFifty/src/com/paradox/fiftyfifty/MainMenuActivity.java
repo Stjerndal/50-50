@@ -15,7 +15,7 @@ public class MainMenuActivity extends Activity {
 		setContentView(R.layout.activity_main_menu);
 		
 		Bundle b = getIntent().getExtras();
-		user = b.getParcelable(V.KEY_CURRENT_USER);
+//		user = b.getParcelable(V.KEY_CURRENT_USER);
 	}
 
 	@Override
@@ -31,8 +31,14 @@ public class MainMenuActivity extends Activity {
 	}
 	
 	public void toMyProfileActivity(View view) {
+//		Intent intent = new Intent(this, MyProfileActivity.class);
+//		intent.putExtra(V.KEY_CURRENT_USER, user);
+//		startActivity(intent);
+		
+		User newUser = new User(V.TMP_USERNAME, V.TMP_USER_EMAIL, V.TMP_USER_REAL_NAME);
+		
 		Intent intent = new Intent(this, MyProfileActivity.class);
-		intent.putExtra(V.KEY_CURRENT_USER, user);
+		intent.putExtra(V.KEY_CURRENT_USER, newUser);
 		startActivity(intent);
 	}
 

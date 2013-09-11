@@ -27,6 +27,7 @@ public class InitialLoginMenuActivity extends Activity {
 		User newFacebookUser = new User();
 		newFacebookUser.setEmailAddress(V.TMP_USER_EMAIL);
 		newFacebookUser.setRealName(V.TMP_USER_REAL_NAME);
+		newFacebookUser.setUserID(V.TMP_USER_ID);
 
 		Intent intent = new Intent(this, FacebookUsernameActivity.class);
 		intent.putExtra(V.KEY_CURRENT_USER, newFacebookUser);

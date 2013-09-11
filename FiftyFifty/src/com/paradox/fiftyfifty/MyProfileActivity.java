@@ -19,13 +19,17 @@ public class MyProfileActivity extends Activity {
 		TextView outTextView= (TextView) findViewById(R.id.tv_my_profile);
 		StringBuilder out = new StringBuilder();
 		
-		out.append("UserID: \t" + user.getUserID());
-		out.append("\nUsername: \t" + user.getUserName());
+//		user = new User(V.TMP_USERNAME, V.TMP_USER_EMAIL, V.TMP_USER_REAL_NAME);
+		out.append("UserID: \t\t" + user.getUserID());
+		out.append("\nUsername: \t\t" + user.getUserName());
 		out.append("\nReal Name: \t" + user.getRealName());
-		out.append("\nEmail: \t" + user.getEmailAddress());
-		out.append("\nPassword: \t" + user.getPassword());
+		out.append("\nEmail: \t\t" + user.getEmailAddress());
+		out.append("\nPassword: \t\t" + user.getPassword());
+		
 		
 		outTextView.setText(out.toString());
+		
+//		outTextView.setText(user.getUserID() + " " + user.getUserName());
 	}
 
 	@Override
