@@ -89,7 +89,37 @@ public class DBHandler {
 		// TODO
 		return null;
 	}
-	
-	
+	/**
+	 * Used for getting  a top10 list of highscore
+	 * @return
+	 */
+	public static PublicUser[] getTotalPointsHighScore(){
+		//TODO
+		return null;
+	}
+	/**
+	 * Used for getting  a top10 list of highscore
+	 * @return
+	 */
+	public static PublicUser[] getPointsGuessPopularHighScore(){
+		//TODO
+		return null;
+	}
+	/**
+	 * Used for getting  a top10 list of highscore
+	 * @return
+	 */
+	public static PublicUser[] getPointsSubmittedQuestionsHighScore(){
+		//TODO
+		return null;
+	}
+	/**
+	 * Used for getting  a top10 list of highscore
+	 * @return
+	 */
+	public static PublicUser[] getPoints1vs1HighScore(){
+		//TODO
+		return null;
+	}
 
 }
