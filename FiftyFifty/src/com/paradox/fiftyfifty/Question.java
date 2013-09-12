@@ -73,7 +73,7 @@ public class Question {
 		answer1 = new Answer();
 		answer2 = new Answer();
 		questionText = "";
-		userID = "";
+		userID = "placeholder";
 	}
 
 	/**
