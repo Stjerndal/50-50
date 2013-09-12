@@ -30,6 +30,7 @@ public class LeaderboardsActivity extends Activity {
 	 */
 	public void totalPoints(View view){
 		PublicUser[] highscore = DBHandler.getTotalPointsHighScore();
+		//INSERT STUFF
 
 	}
 	
@@ -39,6 +40,7 @@ public class LeaderboardsActivity extends Activity {
 	 */
 	public void pointsGuessPopular(View view){
 		PublicUser[] highscore = DBHandler.getPointsGuessPopularHighScore();
+		//INSERT STUFF
 	}
 	
 	/**
@@ -47,6 +49,7 @@ public class LeaderboardsActivity extends Activity {
 	 */
 	public void pointsSubmittedQuestions(View view){
 		PublicUser[] highscore = DBHandler.getPointsSubmittedQuestionsHighScore();
+		//INSERT STUFF
 	}
 	
 	/**
@@ -55,6 +58,7 @@ public class LeaderboardsActivity extends Activity {
 	 */
 	public void points1vs1(View view){
 		PublicUser[] highscore = DBHandler.getPoints1vs1HighScore();
+		//INSERT STUFF
 	}
 
 }
