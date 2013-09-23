@@ -5,6 +5,8 @@ public class Answer {
 	String answerText;
 	
 	/**
+	 * Constructor
+	 * 
 	 * @param args
 	 */
 	public Answer(){
