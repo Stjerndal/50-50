@@ -1,6 +1,7 @@
 package com.paradox.fiftyfifty;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -26,6 +27,19 @@ public class HonestQuestionActivity extends Activity {
 		user = b.getParcelable(V.KEY_CURRENT_USER);
 		questionSet = b.getParcelable(V.KEY_CURRENT_QUESTIONSET);
 		index = b.getInt(V.KEY_CURRENT_QUESTIONSET_INDEX);
+		
+		Button answerButton1 = (Button) findViewById(R.id.honestAnswer1);
+		Button answerButton2 = (Button) findViewById(R.id.honestAnswer2);
+		Question currentQuestion = questionSet.get(index);
+		if(new Random().nextBoolean()){
+			answerButton1.setText(currentQuestion.getAnswer1().getAnswerText());
+			answerButton2.setText(currentQuestion.getAnswer2().getAnswerText());
+		}
+		else{
+			answerButton1.setText(currentQuestion.getAnswer2().getAnswerText());
+			answerButton2.setText(currentQuestion.getAnswer1().getAnswerText());
+		}
+		
 	}
 
 	@Override
