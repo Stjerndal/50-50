@@ -28,8 +28,6 @@ public class Test {
 		questionSet.add(new Question("Would you rather have no arms or no legs?", new Answer("No arms"), new Answer("No legs")));
 		questionSet.add(new Question("Would you rather be blind or retarded?", new Answer("Blind"), new Answer("Retarded")));
 
-
-
 		return questionSet;		
 	}
 
