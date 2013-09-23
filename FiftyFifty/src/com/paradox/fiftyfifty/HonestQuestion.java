@@ -39,7 +39,7 @@ public class HonestQuestion {
 	 * Fetches a set of questions for the game
 	 * @return
 	 */
-	public ArrayList<Question> fetchQuestionSet(){
+	public static ArrayList<Question> fetchQuestionSet(){
 		return DBHandler.getQuestionSet();
 	}
 
