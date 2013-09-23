@@ -1,5 +1,7 @@
 package com.paradox.fiftyfifty;
 
+import java.util.ArrayList;
+
 /**
  * This class is meant to handle all the traffic between client and database
  * 
@@ -118,6 +120,13 @@ public class DBHandler {
 	 * @return
 	 */
 	public static PublicUser[] getPoints1vs1HighScore(){
+		//TODO
+		return null;
+	}
+	/**
+	 * Get a set of questions
+	 */
+	public static ArrayList<Question> getQuestionSet(){
 		//TODO
 		return null;
 	}

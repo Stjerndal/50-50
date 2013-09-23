@@ -1,5 +1,7 @@
 package com.paradox.fiftyfifty;
 
+import java.util.ArrayList;
+
 /**
  * This class is meant to provide methods used in the "Honest Question" game
  * mode
@@ -28,9 +30,17 @@ public class HonestQuestion {
 	 * 
 	 * @return question
 	 */
-	public Question fetchQuestion() {
+	public Question fetchRandomQuestion() {
 		Question question = DBHandler.getRandomQuestion();
 		return question;
+	}
+	
+	/**
+	 * Fetches a set of questions for the game
+	 * @return
+	 */
+	public ArrayList<Question> fetchQuestionSet(){
+		return DBHandler.getQuestionSet();
 	}
 
 	/**

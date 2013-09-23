@@ -6,6 +6,8 @@ public class V {
 	public static final int AMOUNT_OF_QUESTIONS_REQUIRED_TO_SUBMIT = 5;
 	
 	public static final String KEY_CURRENT_USER = "CURRENT_USER_KEY";
+	public static final String KEY_CURRENT_QUESTIONSET = "CURRENT_QUESTIONSET_KEY";
+	public static final String KEY_CURRENT_QUESTIONSET_INDEX = "CURRENT_QUESTIONSET_INDEX_KEY";
 	
 	public static final String TMP_USER_EMAIL = "coolboy91@example.com";
 	public static final String TMP_USER_REAL_NAME = "Klas Bertilsson";

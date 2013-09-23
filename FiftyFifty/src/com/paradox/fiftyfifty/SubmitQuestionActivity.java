@@ -58,7 +58,6 @@ public class SubmitQuestionActivity extends Activity {
 			DBHandler dbhandler = new DBHandler();
 			dbhandler.submitQuestion(question);
 			user.submittedNewQuestion();
-
 			Intent intent = new Intent(this, MainMenuActivity.class);
 			intent.putExtra(V.KEY_CURRENT_USER, user);
 			startActivity(intent);
