@@ -16,7 +16,7 @@ public class Test {
 	 * @return
 	 */
 	public static ArrayList<Question> getQuestionSet(){
-		ArrayList<Question> questionSet = new ArrayList();		
+		ArrayList<Question> questionSet = new ArrayList<Question>();
 		questionSet.add(new Question("Be 1 meter tall and super handome or be 2 meters and kind of ugly?", new Answer("1 meter tall and super handsome"), new Answer("2 meters and kind of ugly")));
 		questionSet.add(new Question("Cats or dogs?", new Answer("Cats"), new Answer("Dogs")));
 		questionSet.add(new Question("Christianity or Islam?", new Answer("Christianity"), new Answer("Islam")));
