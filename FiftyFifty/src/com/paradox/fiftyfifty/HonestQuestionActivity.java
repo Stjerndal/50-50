@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -113,10 +114,23 @@ public class HonestQuestionActivity extends Activity {
 	 * Player wants to cancel
 	 * @param view
 	 */
-	public void submitAnswers(View view){
+	public void submitAnswers(){
 		DBHandler.updateQuestionSet(questionSet);
 		Intent intent = new Intent(this, MainMenuActivity.class);
+		intent.putExtra(V.KEY_CURRENT_USER, user);
 		startActivity(intent);
+	}
+	/**
+	 * On back button
+	 */
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	    if ((keyCode == KeyEvent.KEYCODE_BACK)) { //Back key pressed
+	       //Things to Do
+	    	submitAnswers();
+	        return true;
+	    }
+	    return super.onKeyDown(keyCode, event);
 	}
 
 }
