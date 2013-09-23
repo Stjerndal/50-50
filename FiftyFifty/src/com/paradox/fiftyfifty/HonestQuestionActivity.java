@@ -28,10 +28,10 @@ public class HonestQuestionActivity extends Activity {
 		user = b.getParcelable(V.KEY_CURRENT_USER);
 		questionSet = b.getParcelableArrayList(V.KEY_CURRENT_QUESTIONSET);
 		index = b.getInt(V.KEY_CURRENT_QUESTIONSET_INDEX);
-		
+
 		//Update the question text
 		TextView textView = (TextView) findViewById(R.id.honestQuestion);
-				textView.setText(questionSet.get(index).getQuestionText());
+		textView.setText(questionSet.get(index).getQuestionText());
 		//Update the button texts		
 		Button answerButton1 = (Button) findViewById(R.id.honestAnswer1);
 		Button answerButton2 = (Button) findViewById(R.id.honestAnswer2);
@@ -44,7 +44,7 @@ public class HonestQuestionActivity extends Activity {
 			answerButton1.setText(currentQuestion.getAnswer2().getAnswerText());
 			answerButton2.setText(currentQuestion.getAnswer1().getAnswerText());
 		}
-		
+
 	}
 
 	@Override
@@ -82,7 +82,7 @@ public class HonestQuestionActivity extends Activity {
 
 		//UPDATE AND DISPLAY STATISTICS
 		user.setNumberOfQuestionsAnswered(user.getNumberOfQuestionsAnswered() + 1);
-		
+
 		int totalAnswers = currentQuestion.getNoOfAnswer1() + currentQuestion.getNoOfAnswer2();
 		textView1.setText("You selected " + button.getText() + ". " + currentQuestion.getNoOfAnswer1()/totalAnswers + " % of people answered '"
 				+ currentQuestion.getAnswer1().getAnswerText() + "' ," + currentQuestion.getNoOfAnswer2()/totalAnswers + " % of people answered '"
@@ -94,12 +94,13 @@ public class HonestQuestionActivity extends Activity {
 	 * if the "next"-button has been pressed
 	 * @param view
 	 */
-	public void next(View view){
-		//APPEND PARCABLE OBJECTS
-		if(index >= questionSet.size()-3){
-			questionSet.addAll(DBHandler.getQuestionSet());
-		}
+	public void next(View view){	
 		index++;
+		//CHECK IF WE'RE CLOSING IN ON THE END OF QUESTIONSET ( IF SO ; GET MORE )
+		if(index >= questionSet.size()-3){
+			questionSet.addAll(questionSet.size()-1, DBHandler.getQuestionSet());
+		}
+		//APPEND PARCABLE OBJECTS
 		Intent intent = new Intent(this, HonestQuestionActivity.class);
 		intent.putExtra(V.KEY_CURRENT_USER, user);
 		intent.putParcelableArrayListExtra(V.KEY_CURRENT_QUESTIONSET, DBHandler.getQuestionSet());
@@ -121,16 +122,16 @@ public class HonestQuestionActivity extends Activity {
 		startActivity(intent);
 	}
 	/**
-	 * On back button
+	 * On back button press
 	 */
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-	    if ((keyCode == KeyEvent.KEYCODE_BACK)) { //Back key pressed
-	       //Things to Do
-	    	submitAnswers();
-	        return true;
-	    }
-	    return super.onKeyDown(keyCode, event);
+		if ((keyCode == KeyEvent.KEYCODE_BACK)) { //Back key pressed
+			//Things to Do
+			submitAnswers();
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 
 }
