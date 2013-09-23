@@ -25,7 +25,7 @@ public class HonestQuestionActivity extends Activity {
 
 		Bundle b = getIntent().getExtras();
 		user = b.getParcelable(V.KEY_CURRENT_USER);
-		questionSet = b.getParcelable(V.KEY_CURRENT_QUESTIONSET);
+		questionSet = b.getParcelableArrayList(V.KEY_CURRENT_QUESTIONSET);
 		index = b.getInt(V.KEY_CURRENT_QUESTIONSET_INDEX);
 		
 		Button answerButton1 = (Button) findViewById(R.id.honestAnswer1);
@@ -95,7 +95,7 @@ public class HonestQuestionActivity extends Activity {
 		index++;
 		Intent intent = new Intent(this, HonestQuestionActivity.class);
 		intent.putExtra(V.KEY_CURRENT_USER, user);
-		intent.putExtra(V.KEY_CURRENT_QUESTIONSET, questionSet);
+		intent.putParcelableArrayListExtra(V.KEY_CURRENT_QUESTIONSET, DBHandler.getQuestionSet());
 		intent.putExtra(V.KEY_CURRENT_QUESTIONSET_INDEX, index);
 
 		//START NEW INTENT (HONESTQUESTIONACTIVITY)

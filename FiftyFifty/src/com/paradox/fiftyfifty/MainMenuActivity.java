@@ -65,7 +65,7 @@ public class MainMenuActivity extends Activity {
 	public void toHonestQuestionActivity(View view){
 		Intent intent = new Intent(this, HonestQuestionActivity.class);
 		intent.putExtra(V.KEY_CURRENT_USER, user);
-		intent.putExtra(V.KEY_CURRENT_QUESTIONSET, HonestQuestion.fetchQuestionSet());
+		intent.putParcelableArrayListExtra(V.KEY_CURRENT_QUESTIONSET, DBHandler.getQuestionSet());
 		intent.putExtra(V.KEY_CURRENT_QUESTIONSET_INDEX, 0);
 		startActivity(intent);
 	}
