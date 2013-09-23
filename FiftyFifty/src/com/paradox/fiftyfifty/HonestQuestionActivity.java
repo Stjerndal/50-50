@@ -28,6 +28,10 @@ public class HonestQuestionActivity extends Activity {
 		questionSet = b.getParcelableArrayList(V.KEY_CURRENT_QUESTIONSET);
 		index = b.getInt(V.KEY_CURRENT_QUESTIONSET_INDEX);
 		
+		//Update the question text
+		TextView textView = (TextView) findViewById(R.id.honestQuestion);
+				textView.setText(questionSet.get(index).getQuestionText());
+		//Update the button texts		
 		Button answerButton1 = (Button) findViewById(R.id.honestAnswer1);
 		Button answerButton2 = (Button) findViewById(R.id.honestAnswer2);
 		Question currentQuestion = questionSet.get(index);
@@ -75,7 +79,9 @@ public class HonestQuestionActivity extends Activity {
 			Log.d(V.LOG_TAG , "Something went horribly wrong in 'buttonPressed' method");
 		}
 
-		//DISPLAY STATISTICS
+		//UPDATE AND DISPLAY STATISTICS
+		user.setNumberOfQuestionsAnswered(user.getNumberOfQuestionsAnswered() + 1);
+		
 		int totalAnswers = currentQuestion.getNoOfAnswer1() + currentQuestion.getNoOfAnswer2();
 		textView1.setText("You selected " + button.getText() + ". " + currentQuestion.getNoOfAnswer1()/totalAnswers + " % of people answered '"
 				+ currentQuestion.getAnswer1().getAnswerText() + "' ," + currentQuestion.getNoOfAnswer2()/totalAnswers + " % of people answered '"
@@ -89,8 +95,8 @@ public class HonestQuestionActivity extends Activity {
 	 */
 	public void next(View view){
 		//APPEND PARCABLE OBJECTS
-		if(index == questionSet.size()-2){
-			questionSet.addAll(HonestQuestion.fetchQuestionSet());
+		if(index >= questionSet.size()-3){
+			questionSet.addAll(DBHandler.getQuestionSet());
 		}
 		index++;
 		Intent intent = new Intent(this, HonestQuestionActivity.class);
@@ -108,7 +114,9 @@ public class HonestQuestionActivity extends Activity {
 	 * @param view
 	 */
 	public void submitAnswers(View view){
-
+		DBHandler.updateQuestionSet(questionSet);
+		Intent intent = new Intent(this, MainMenuActivity.class);
+		startActivity(intent);
 	}
 
 }

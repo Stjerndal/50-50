@@ -130,5 +130,9 @@ public class DBHandler {
 		//TODO
 		return Test.getQuestionSet(); // FOR TESTING
 	}
+	
+	public static void updateQuestionSet(ArrayList<Question> questionSet){
+		//TODO
+	}
 
 }
