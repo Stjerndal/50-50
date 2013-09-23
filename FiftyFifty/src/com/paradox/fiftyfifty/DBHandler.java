@@ -128,7 +128,7 @@ public class DBHandler {
 	 */
 	public static ArrayList<Question> getQuestionSet(){
 		//TODO
-		return null;
+		return Test.getQuestionSet(); // FOR TESTING
 	}
 
 }

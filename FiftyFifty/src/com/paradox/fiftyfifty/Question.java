@@ -22,6 +22,15 @@ public class Question implements Parcelable {
 		questionText = "";
 		userID = "placeholder";
 	}
+	public Question(String questionText, Answer answer1, Answer answer2){
+		noOfAnswer1 = 0;
+		noOfAnswer2 = 0;
+		chosenAnswer = 0;
+		this.answer1 = answer1;
+		this.answer2 = answer2;
+		this.questionText = questionText;
+		userID = "placeholder";
+	}
 
 	public Question(Parcel in) {
 		readFromParcel(in);

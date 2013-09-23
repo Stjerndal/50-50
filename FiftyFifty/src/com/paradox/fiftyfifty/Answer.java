@@ -15,6 +15,9 @@ public class Answer implements Parcelable{
 	public Answer(){
 		answerText = "";
 	}
+	public Answer(String answerText){
+		this.answerText = answerText;
+	}
 	
 	public Answer(Parcel in) {
 		readFromParcel(in);
