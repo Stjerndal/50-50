@@ -34,6 +34,7 @@
     <string name="activity_submit_question_hint_alternative_2">Alternative 2 here!</string>
     <string name="activity_suvmit_question_button_submit">Submit Question</string>
     <string name="activity_suvmit_question_button_cancel">Cancel</string>
+    <string name="activity_honest_question_next_button">Next</string>
     <string name="title_activity_email_create_account">EmailCreateAccountActivity</string>
     <string name="title_activity_facebook_username">FacebookUsernameActivity</string>
     <string name="confirm">Confirm</string>

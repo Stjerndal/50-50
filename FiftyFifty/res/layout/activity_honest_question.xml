@@ -42,9 +42,18 @@
         android:id="@+id/feedback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/honestAnswer2"
-        android:layout_marginTop="110dp"
-        android:layout_toLeftOf="@+id/honestAnswer2"
-        android:text="här kommer text" />
+        android:layout_alignLeft="@+id/honestAnswer1"
+        android:layout_below="@+id/honestAnswer1"
+        android:layout_marginTop="53dp"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/honestAnswer2"
+        android:layout_below="@+id/feedback"
+        android:layout_marginTop="63dp"
+        android:text="@string/activity_honest_question_next_button"/>
 
 </RelativeLayout>
