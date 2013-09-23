@@ -54,6 +54,7 @@
         android:layout_alignRight="@+id/honestAnswer2"
         android:layout_below="@+id/feedback"
         android:layout_marginTop="63dp"
-        android:text="@string/activity_honest_question_next_button"/>
+        android:text="@string/activity_honest_question_next_button"
+        android:onClick="next"/>
 
 </RelativeLayout>
